@@ -1,0 +1,70 @@
+/* 全体向けCSS */
+
+html {
+	width: 99%;
+	text-align: center;
+}
+
+body {
+	background: whitesmoke;
+}
+
+/* ------------------------------------------
+	header
+------------------------------------------ */
+
+header {
+	border: 5px solid gray;
+	border-radius: 50px;
+	background-color: gray;
+	margin: 0px auto;
+	display: grid;
+	grid-template: "left right" / 1fr minmax(200px,auto);
+}
+
+/* top */
+
+.top { grid-area: left; }
+
+/* undergroundWorld ボタンで背景色を変更 */
+
+.undergroundWorld {	grid-area: right; }
+.undergroundWorldColor_btn{
+  margin: 10px auto;
+  font-size: large;
+	width: 70px;
+	height: 70px;
+	color: white;
+	background-color: #666;
+  border: gold solid 3px;
+  border-radius: 35px;
+}
+.undergroundWorldColor_btn:hover{
+	width: 72px;
+	height: 72px;
+	border-radius: 30px;
+	color: black;
+  background-color: #eee;
+
+}
+/* ------------------------------------------
+ ボタンのＣＳＳは【style_btn.css】に、あります。
+------------------------------------------ */
+
+/* ------------------------------------------
+	footer
+------------------------------------------ */
+
+footer {
+	width: 80%;
+	border: gray solid 10px;
+	border-radius: 50px;
+}
+
+/* ------------------------------------------
+	スマートフォン対応CSS
+------------------------------------------ */
+
+@media(max-width:767px) {}
+
+/*　全体 - ナビゲーション　*/

@@ -1,0 +1,86 @@
+/* ------------------------------------------------
+コンテンツのcolorを指定する.css
+------------------------------------------------ */
+.red{color: red ; }
+.pink{color: pink ; }
+.purple{color: purple ; }
+.violet{color: violet ; }
+.navy{color: navy ; }
+.blue{color: blue ; }
+.skyblue{color: skyblue; }
+.aqua{color: aqua ; }
+.darkgreen{color: darkgreen ;}
+.green{color: green ; }
+.seagreen{color: seagreen ; }
+.yellow{color: yellow ; }
+.gold{color: gold; }
+.orange{color: orange ; }
+.wheat{color: wheat ; }
+.brow{color: brown ; }
+
+.white{color: white ; }
+.gray{color: gray ; }
+.black{color: black ; }
+.cfff{color: #fff ; }
+.ceee{color: #eee ; }
+.cddd{color: #ddd ; }
+.cccc{color: #cccc ; }
+.cbbb{color: #bbb ; }
+.caaa{color: #aaa ; }
+.c999{color: #999 ; }
+.c888{color: #888 ; }
+.c777{color: #777 ; }
+.c666{color: #666 ; }
+.c555{color: #555 ; }
+.c444{color: #444 ; }
+.c333{color: #333 ; }
+.c222{color: #222 ; }
+.c111{color: #111 ; }
+/* ------------------------------------------------
+コンテンツのbackground-colorを指定する.css
+------------------------------------------------ */
+.bc-red{background-color: red ; }
+.bc-pink{background-color: pink ; }
+.bc-purple{background-color: purple ; }
+.bc-violet{background-color: violet ; }
+.bc-navy{background-color: navy ; }
+.bc-blue{background-color: blue ; }
+.bc-skyblue{background-color: skyblue; }
+.bc-aqua{background-color: aqua ; }
+.bc-darkgreen{background-color: darkgreen ;}
+.bc-green{background-color: green ; }
+.bc-seagreen{background-color: seagreen ; }
+.bc-yellow{background-color: yellow ; }
+.bc-gold{background-color: gold; }
+.bc-orange{background-color: orange ; }
+.bc-wheat{background-color: wheat ; }
+.bc-brow{background-color: brown ; }
+
+.bc-white{background-color: white ; }
+.bc-gray{background-color: gray ; }
+.bc-black{background-color: black ; }
+.bc-cfff{background-color: #fff ; }
+.bc-ceee{background-color: #eee ; }
+.bc-cddd{background-color: #ddd ; }
+.bc-cccc{background-color: #cccc ; }
+.bc-cbbb{background-color: #bbb ; }
+.bc-caaa{background-color: #aaa ; }
+.bc-c999{background-color: #999 ; }
+.bc-c888{background-color: #888 ; }
+.bc-c777{background-color: #777 ; }
+.bc-c666{background-color: #666 ; }
+.bc-c555{background-color: #555 ; }
+.bc-c444{background-color: #444 ; }
+.bc-c333{background-color: #333 ; }
+.bc-c222{background-color: #222 ; }
+.bc-c111{background-color: #111 ; }
+/* ------------------------------------------------
+コンテンツのfont-sizeを指定する.css
+------------------------------------------------ */
+.xx-small{font-size: xx-small; } 
+.x-small{font-size: x-small; }
+.small{font-size: small; }
+.medium{font-size: medium; }
+.large{font-size: large; }
+.x-large{font-size: x-large; }
+.xx-large{font-size: xx-large; }

@@ -1,0 +1,196 @@
+body {
+  margin: 0 auto;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  text-align: center;
+  width: 84%;
+  display: grid;
+  grid-template: "gray       gray       header    " minmax(50px, auto) "mainVisual mainVisual mainVisual" minmax(120px, auto) "nav        main       main      " minmax(500px, auto) "footer     main       main      " minmax(50px, auto) "xxx        main       main      " /140px 1fr 170px;
+}
+
+/* 共通の設定 */
+
+h1, h2 {
+  font-family: 'Diplomata SC', 'Sawarabi Mincho', sans-serif;
+}
+
+.ta-l { text-align: left; }
+.ta-r { text-align: right;}
+button:hover{cursor: pointer;} /* すべての<button>ボタンをホバーしたとき、マウスカーソルを変更する */
+a:hover{cursor: pointer;} /* すべての<a>タグをホバーしたとき、マウスカーソルを変更する */
+
+/* ヘッダー　サイトのタイトル */
+
+header {
+  grid-area: header;
+  display: block;
+  padding: 0px 10px;
+  background-color: #aaa;
+  font-family: 'Diplomata SC', serif;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+}
+
+/* gray */
+
+.gray {
+  grid-area: gray;
+}
+
+/* メインヴィジュアル */
+
+.mainVisual {
+  grid-area: mainVisual;
+  padding: 10px;
+}
+
+/* ナビゲーション　左サイドに配置　スムーススクロール採用 */
+
+nav {
+  grid-area: nav;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+nav p {
+  font-family: 'Diplomata SC', 'Sawarabi Mincho', sans-serif;
+  font-size: x-large;
+}
+
+nav button {
+  margin: 15px auto;
+  font-size: large;
+  width: 80%;
+  height: 50px;
+  border: gold solid 3px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+
+nav button:hover {
+  width: 82%;
+  height: 53px;
+  background-color: #444;
+  box-shadow: none;
+}
+
+/* メインのコンテンツ */
+
+main {
+  grid-area: main;
+  display: block;
+}
+
+.main1, .main2, .main3, .main4 {
+  border: gold solid 0px 0px 1.5px 1.5px;
+  margin: 0px;
+  padding: 5px;
+}
+
+.main1 {
+  background: linear-gradient(to left top, #ffd, #eee, #ffd);
+}
+
+.main2 {
+  background: linear-gradient(to left top, #777, #ddd, #777);
+}
+
+.main3 {
+  background: linear-gradient(to left top, #ffd, #eee, #ffd);
+}
+
+.main4 {
+  background: linear-gradient(to left top, #777, #ddd, #777);
+}
+
+.main1 p, .main2 p, .main3 p, .main4 p {
+  margin: 0px 5px;
+  font-size: 18px;
+}
+
+.main1_contents, .main2_contents, .main3_contents, .main4_contents {
+  display: flex;
+}
+
+.main1_contents_flex1, .main2_contents_flex1, .main3_contents_flex1, .main4_contents_flex1 {
+  flex: 1;
+}
+
+.goldBorder {
+  margin: 5px 10px;
+  height: auto;
+  border: gold solid;
+  border-right: 3px;
+  border-bottom: 3px;
+}
+
+/* フッター　左サイドのnavの下に小さく配置 */
+
+footer {
+  grid-area: footer;
+  border: #aaa solid 10px;
+  border-radius: 0 0 0 15px;
+}
+
+/* カーソルをホバーすると、main1の画像がお辞儀する。 */
+
+.bowing:hover {
+  -moz-transition: -moz-transform 50ms linear;
+  -webkit-transition: -webkit-transform 50ms linear;
+  -o-transition: -o-transform 50ms linear;
+  -ms-transition: -ms-transform 50ms linear;
+  -moz-transform: rotateZ(-20deg);
+  -webkit-transform: rotateZ(-20deg);
+  -o-transform: rotateZ(-20deg);
+  -ms-transform: rotateZ(-20deg);
+  width: 122px;
+  cursor: pointer;
+}
+
+/* レスポンシブ対応 */
+
+@media (max-width:1000px) {
+  /* レイアウト変更➔横幅100%・nav＆footerをtopの左上に配置 */
+  body {
+    width: 100%;
+    grid-template: 
+    "mainVisual mainVisual" minmax(120px, auto) 
+    "nav        header    " minmax(60px, auto) 
+    "gray       gray      " 0px 
+    "main       main      "
+    "main       main      "
+    "footer     footer    " minmax(10px, auto) /1fr 170px;
+  }
+  /* ナビゲーションを横並びに変更 */
+  .nav_top {
+    grid-area: nav;
+    width: 100%;
+  }
+  nav p {
+    font-size: medium;
+    margin: 0px 5px;
+    padding: 0;
+  }
+  nav button {
+    max-width: 22%;
+    margin: 0px 5px 10px 5px;
+  }
+  footer {
+    border: 0;
+    border-radius: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .r-none{ display: none; }
+}
+
+/* レスポンシブ対応 */
+
+@media (max-width:650px) {
+  nav button {
+    max-width: 20%;
+    font-size: small;
+  }
+}

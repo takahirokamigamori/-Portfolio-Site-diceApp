@@ -1,0 +1,191 @@
+/*------------
+ ボタンのＣＳＳ
+ ---------- */
+.top_btn_box{
+  display:grid;
+	grid-template:
+		"choice    choice    btn-1d4   log_message "
+		"choice    choice    btn-1d10  log_message "
+		"choice    choice    btn-1d20  log_message "
+		"btn-2d6   btn-1d100 log_total log_message "
+		"under     under     under     log_message "
+		/ 1fr      1fr       1fr       2fr;
+		gap: 10px 20px;
+	margin: 0px auto;
+	text-align: center;
+	min-height: 150px;
+}
+.dice2D6_btn{	grid-area: btn-2d6; }
+.dice1d100_btn{	grid-area: btn-1d100; }
+.dice1d4_btn{grid-area: btn-1d4; }
+.dice1d10_btn{grid-area: btn-1d10; }
+.dice1d20_btn{grid-area: btn-1d20; }
+
+button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき、マウスカーソルを変更する */
+
+.dice2D6_btn,.dice1d100_btn,.dice1d4_btn,.dice1d10_btn,.dice1d20_btn{
+	border: gold solid 3px;
+	border-radius: 10px;
+	box-shadow: gray 5px 5px 5px;
+	font-size: 16px;
+	width: auto;
+	min-width: 160px;
+	height: auto;
+	min-height: 60px;
+}
+.dice2D6_btn:hover,.dice1d100_btn:hover,.dice1d4_btn:hover,.dice1d10_btn:hover,.dice1d20_btn:hover{
+	width: auto;
+	box-shadow: none;
+}
+
+.dice2D6_btn:hover{	background-color: navy; }
+.dice1d100_btn:hover{	background-color: darkgreen; }
+.dice1d4_btn:hover{	background-color: brown; }
+.dice1d10_btn:hover{	background-color: brown; }
+.dice1d20_btn:hover{	background-color: brown; }
+/* form */
+.choiceDice{
+	grid-area: choice;
+	display: inline-block;
+	margin: 0px auto;
+	width: 90%;
+	color: #fff;
+  background-color: #888;
+	border: gold solid 10px;
+  border-radius: 10px;
+}
+
+.choiceDice_table{
+	margin: 0 auto;
+}
+
+.choiceDice p span{
+	color: #eee;
+	font-size: 1.2em;
+	background:linear-gradient(transparent 85%, gold 85%);
+}
+
+#diceTypes,#roll{
+	display: inline-block;
+
+	width: 150px;
+	height: 40px;
+}
+		/*-------------------------------------------
+		ChoiceDice-btnのＣＳＳ
+		-------------------------------------------*/
+
+		.ChoiceDice-btn {
+			background-color: #222;
+			width: 180px;
+			height: 50px;
+			text-decoration: none;
+			line-height: 3.5;
+			display: block;
+			font-family: 'Diplomata SC', serif;
+			color: gold;
+			margin: 10px auto;
+			padding: 0;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			position: relative;
+		}
+		.ChoiceDice-btn span {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		/*
+		.ChoiceDice-btn::before 右の線
+		.ChoiceDice-btn::after 下の線
+		.ChoiceDice-btn span::before 左の線
+		.ChoiceDice-btn span::after 上の線
+		*/
+		.ChoiceDice-btn::before,
+		.ChoiceDice-btn::after {
+			position: absolute;
+			content: "";
+			right: 0;
+			bottom: 0;
+			background: green;
+			transition: all 0.3s ease;
+		}
+		.ChoiceDice-btn span::before,
+		.ChoiceDice-btn span::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 0;
+			background: green;
+			transition: all 0.3s ease;
+		}
+		.ChoiceDice-btn::before,
+		.ChoiceDice-btn span::before {
+			width: 3px;
+			height: 50%;
+		}
+		.ChoiceDice-btn::after,
+		.ChoiceDice-btn span::after {
+			width: 20%;
+			height: 3px;
+		}
+		/*
+		ホバー時の縦の動作
+		右の緑線と左の緑線の高さを100%にする
+		*/
+		.ChoiceDice-btn:hover::before,
+		.ChoiceDice-btn span:hover::before {
+			height: 100%;
+		}
+		/*
+		ホバー時の横の動作
+		下の緑線と上の緑線の横幅を100%にする
+		*/
+		.ChoiceDice-btn:hover::after,
+		.ChoiceDice-btn span:hover::after {
+			width: 100%;
+}
+/* textContainer */
+.textContainer{
+	grid-area: under;
+	margin: 0px auto;
+  font-size: large;
+  border: 15px solid gray;
+	border-radius: 10px;
+	width: 90%;
+	min-height: 200px;
+}
+.textContainer h1{ color: gold;}
+
+/* 合計を表示する */
+.log_total{grid-area: log_total;}
+
+.log_total,.log_message{
+	margin: 1px auto;
+	border: 10px solid gray;
+	border-radius: 10px;
+	width: 95%;
+
+}
+/* ログを表示する */
+.log_message{grid-area: log_message;}
+
+.reset_btn{
+  margin: 15px auto;
+  font-size: large;
+	width: 150px;
+	height: 30px;
+	color: white;
+	background-color: #333;
+  border: gold solid 3px;
+  border-radius: 25px;
+
+}
+.reset_btn:hover{
+	width: 153px;
+	height: 33px;
+	color: skyblue;
+  background-color: #eee;
+
+}
