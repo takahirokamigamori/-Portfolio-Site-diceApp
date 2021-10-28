@@ -16,7 +16,7 @@ body {
 header {
 	border: 5px solid gray;
 	border-radius: 50px;
-	background-color: gray;
+  background: linear-gradient(to left top, #777, #ddd, #777);
 	margin: 0px auto;
 	display: grid;
 	grid-template: "left right" / 1fr minmax(200px,auto);
