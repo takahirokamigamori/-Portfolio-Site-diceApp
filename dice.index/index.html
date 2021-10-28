@@ -25,11 +25,11 @@
 	<meta name="twitter:title" content="サイコロ・１００個まで振れるアプリ！！" />
 	<meta name="twitter:description" content="色んなサイコロ（Dice）を、コロコロ振れるアプリです。ダイス目を合計機能・ログ機能搭載。ＴＲＰＧに、お勧めです。" />
 
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style_btn.css">
-	<!-- コンテンツの【class】でcolor/background-color/font-sizを指定するｃｓｓ -->
-	<link rel="stylesheet" href="css/collor_class.css">
-	<link rel="stylesheet" href="css/top_btn.css"><!-- TOPボタン -->
+	<link rel="stylesheet" href="css/style_btn.css"><!-- mainコンテンツ全般（ボタンやウィンドウ）のｃｓｓ -->
+	<link rel="stylesheet" href="css/collor_class.css"><!-- color/background-color/font-siz/text-alignを設定できる【class】を記載した、ｃｓｓ -->
+	<link rel="stylesheet" href="css/top_btn.css"><!-- TOPへ戻るボタン -->
 
 	<!-- fonts.googleから文字データのリンク -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,7 +100,7 @@
 							<p><span>種類</span></p>
 						</th>
 						<td>
-							<select name="js-choiceDiceFrom" id="diceTypes" list="diceTypes">
+							<select name="js-choiceDiceFrom" class="large ta-c" id="diceTypes" list="diceTypes">
 								<option value=4>４面</option>
 								<option value=6 selected>６面</option>
 								<option value=8>８面</option>
@@ -119,7 +119,7 @@
 							<p><span>個数</span></p>
 						</th>
 						<td>
-							<input type="number" name="js-choiceDiceFrom" id="roll" min="1" max="100" value="2">
+							<input type="number" name="js-choiceDiceFrom" class="x-large ta-c" id="roll" min="1" max="100" value="2">
 						</td>
 						<td>
 							<p>振ります。</p>
@@ -136,9 +136,9 @@
 
 		<!-- メッセージウインドウ -->
 		<div class="textContainer bc-black white">
-			<h3 class="gold">メッセージウインドウ</h3>
+			<h3 class="textContainer-messageWindow gold bc-c111 ta-l">メッセージウインドウ</h3>
 			<br>
-			<p class="totalValueInDice"><img src="./img/dice/Polyhedron_Dice.png" alt="多面体ダイスの画像です" width="300px"
+			<p class="totalValueInDice"><img src="./img/dice/Polyhedron_Dice.png" alt="多面体ダイスの画像です" width="250px"
 					height="auto"></p>
 
 		</div>
