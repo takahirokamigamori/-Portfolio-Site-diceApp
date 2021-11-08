@@ -17,6 +17,8 @@ const normal_attack = () => {
 
   const normal_attack_damage = randomD6() + randomD6() - 4;
   console.log(normal_attack_damage);
+  
+  se_diceRoll(); /* ダイスを転がす。効果音（SE） */
 
   if (normal_attack_damage > 0) {
     const normal_attack_damage_message = "nに攻勢をかけ<br><h2> " + normal_attack_damage + "点</h2>のダメージを与えた！";

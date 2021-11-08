@@ -30,7 +30,7 @@ const diceImgSet = (n) => {
   }
 }
 
-const dice2D6 = () => {
+const dice2D6 = () => 　{
   const d6_1 = randomD6();
   const d6_2 = randomD6();
   const num2D6 = d6_1 + d6_2;
@@ -42,6 +42,8 @@ const dice2D6 = () => {
   console.log("２個目の出目は" + d6_2 + "でした。");
   console.log("２Ｄ６の出目は" + num2D6 + "でした。");
 
+  se_diceRoll(); /* ダイスを転がす。効果音（SE） */
+
   textContainer.innerHTML = "<p>２Ｄ６の出目は " + d6_1img + " " + d6_2img + " が出ました。</p>" +
     "<p>合計：<span class='gold xx-large'> " + num2D6 + " </span>でした。</p>";
   console.log(textContainer);
@@ -49,7 +51,7 @@ const dice2D6 = () => {
   /* ------------------------------------------------
   ログの総計【log_total_num】にnum2D6を加算して、再定義する。
   関数は「forDice.js」にあります。
------------------------------------------------- */
+  ------------------------------------------------ */
   let Results = set_log_total_num(num2D6);
   console.log("log_total_numは" + Results + " でした。");
   /* ------------------------------------------------
@@ -61,11 +63,11 @@ const dice2D6 = () => {
   innerHTML_log_total_num(Results);
 
   /* ------------------------------------------------
-    ログのメッセージの先頭に、処理結果を出力する。
+    ログのメッセージを更新し、処理結果を出力する。
+    関数[diceRollLog_controller]はforDice.jsに記載。
+    （引数）は最新のログに使用
   ------------------------------------------------ */
-  const js_log_message = document.getElementById('js_log_message');
-  console.log(js_log_message);
-  js_log_message.insertAdjacentText('afterbegin',
-    "２Ｄ６の出目は　" + num2D6 + " でした。");
+  diceRollLog_controller(num2D6);
+
 
 }

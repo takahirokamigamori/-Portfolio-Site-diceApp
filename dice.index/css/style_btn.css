@@ -1,14 +1,15 @@
-/*------------
- ボタンのＣＳＳ
- ---------- */
+/*----------------------------
+ mainコンテンツとボタンの.css
+ -------------------------- */
 .top_btn_box{
   display:grid;
 	grid-template:
-		"under       under      choice   choice   "
-		"under       under      choice   choice   "
-		"log_total   btn-1d100  btn-2d6  btn-10d10"
-		"log_message btn-1d100  btn-1d4  btn-1d20 "
-		"log_message .........  .......  ........ "
+		"under       under       choice    choice   "
+		"under       under       choice    choice   "
+		"log_total   btn-2d6     btn-1d100 btn-1d4  "
+		"log_message log_message btn-1d100 btn-10d10"
+		"log_message log_message ......... btn-1d20 "
+		"log_message log_message ......... ........ "
 		/ 1fr         1fr        1fr        1fr;
 		gap: 10px 20px;
 	margin: 0px auto;
@@ -43,7 +44,10 @@ button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき�
 .dice1d4_btn:hover{	background-color: brown; }
 .dice10d10_btn:hover{	background-color: brown; }
 .dice1d20_btn:hover{	background-color: brown; }
-/* form */
+
+/*----------------------------
+	choiceDice
+ -------------------------- */
 .choiceDice{
 	grid-area: choice;
 	display: inline-block;
@@ -55,9 +59,7 @@ button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき�
   border-radius: 10px;
 }
 
-.choiceDice_table{
-	margin: 0 auto;
-}
+.choiceDice_table{ margin: 0 auto; }
 
 .choiceDice p span{
 	color: #eee;
@@ -146,7 +148,9 @@ button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき�
 		.ChoiceDice-btn span:hover::after {
 			width: 100%;
 }
-/* textContainer */
+/*----------------------------
+	textContainer のメッセージウィンドウ
+ -------------------------- */
 .textContainer{
 	grid-area: under;
 	margin: 0px auto;
@@ -159,7 +163,9 @@ button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき�
 .textContainer-messageWindow{	margin: 5px;}
 .textContainer h1{ color: gold;}
 
-/* 合計を表示する */
+/*----------------------------
+	合計のメッセージウィンドウ
+ -------------------------- */
 .log_total{grid-area: log_total;}
 
 .log_total,.log_message{
@@ -169,11 +175,18 @@ button:hover{cursor: pointer;} /* すべてのボタンをホバーしたとき�
 	width: 95%;
 
 }
-/* ログを表示する */
-.log_message{grid-area: log_message;}
+/*----------------------------
+	ログのメッセージウィンドウ
+ -------------------------- */
+.log_message{	grid-area: log_message; }
+
+.log_message_title{
+	margin: 0 0 5px 0;
+	padding: 5px;
+}
 
 .reset_btn{
-  margin: 15px auto;
+  margin: 12px auto;
   font-size: large;
 	width: 150px;
 	height: 30px;

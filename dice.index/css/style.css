@@ -1,7 +1,7 @@
 /* 全体向けCSS */
 
 html {
-	width: 99%;
+	width: 80%;
 	text-align: center;
 }
 
@@ -17,14 +17,16 @@ header {
 	border: 5px solid gray;
 	border-radius: 50px;
   background: linear-gradient(to left top, #777, #ddd, #777);
-	margin: 0px auto;
+	margin: 3px auto;
 	display: grid;
 	grid-template: "left right" / 1fr minmax(200px,auto);
 }
 
-/* top */
+/* header-title */
 
-.top { grid-area: left; }
+.header-title {
+	grid-area: left;
+}
 
 /* undergroundWorld ボタンで背景色を変更 */
 
@@ -65,6 +67,21 @@ footer {
 	スマートフォン対応CSS
 ------------------------------------------ */
 
-@media(max-width:767px) {}
+	@media(max-width:1000px) {
+	/* ------------------------------------------
+		全体    @media(max-width:1000px)
+	------------------------------------------ */
+	html { width: 98%; }
 
-/*　全体 - ナビゲーション　*/
+	/* ------------------------------------------
+		header    @media(max-width:1000px)
+	------------------------------------------ */
+		/* header-title */
+		.header-title { font-size: 0.7fr; }
+	}
+
+		@media(max-width:767px) {
+		/*　全体　*/
+
+		}
+

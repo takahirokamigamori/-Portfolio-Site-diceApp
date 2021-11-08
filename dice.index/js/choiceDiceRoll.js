@@ -66,7 +66,8 @@ const choiceDiceRoll = () => {
     console.log(dn);
     choiceDiceNum = choiceDiceNum + dn;
   }
-
+  se_diceRoll(); /* ダイスを転がす。効果音（SE） */
+  
   console.log(diceTypes + "面体のサイコロを" + end_dice + "個、振りました。");
   console.log("合計の出目は " + choiceDiceNum + " でした。");
 
@@ -87,11 +88,12 @@ const choiceDiceRoll = () => {
    関数は「forDice.js」にあります。
   ------------------------------------------------ */
   innerHTML_log_total_num(Results);
+     
   /* ------------------------------------------------
-  ログのメッセージの先頭に、処理結果を出力する。
------------------------------------------------- */
-  const js_log_message = document.getElementById('js_log_message');
-  console.log(js_log_message);
-  js_log_message.insertAdjacentText('afterbegin',
-    end_dice + "Ｄ" + diceTypes + "の出目は、合計： " + choiceDiceNum + " でした。");
+    ログのメッセージを更新し、処理結果を出力する。
+    関数[diceRollLog_controller]はforDice.jsに記載。
+    （引数）は最新のログに使用
+  ------------------------------------------------ */
+  diceRollLog_controller(choiceDiceNum);
+
 }

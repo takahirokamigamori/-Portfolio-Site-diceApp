@@ -28,7 +28,8 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style_btn.css"><!-- mainコンテンツ全般（ボタンやウィンドウ）のｃｓｓ -->
-	<link rel="stylesheet" href="css/collor_class.css"><!-- color/background-color/font-siz/text-alignを設定できる【class】を記載した、ｃｓｓ -->
+	<link rel="stylesheet" href="css/common.css">
+	<!-- color/background-color/font-siz/text-alignを設定できる【class】を記載した、ｃｓｓ -->
 	<link rel="stylesheet" href="css/top_btn.css"><!-- TOPへ戻るボタン -->
 
 	<!-- fonts.googleから文字データのリンク -->
@@ -36,15 +37,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet"><!-- 日本語・明朝体 -->
 	<link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet"><!-- 飾り文字・日本語無し -->
+
 </head>
 
 <!-- body -->
 
 <body>
 	<header class="header">
-		<div class="top darkgreen">
-			<h1>サイコロ・１００個まで振れるアプリ！！</h1>
-		</div>
+		<h1 class="header-title darkgreen">
+			サイコロ・１００個まで振れるアプリ！！
+		</h1>
 
 		<!-- undergroundWorld	(ボタンで背景色を変更する) -->
 		<table class="undergroundWorld">
@@ -58,7 +60,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="color" value="#fff" id="undergroundWorldColor">
+					<input type="color" value="#Cfffaf" id="undergroundWorldColor">
 				</td>
 			</tr>
 		</table>
@@ -137,8 +139,7 @@
 		<!-- メッセージウインドウ -->
 		<div class="textContainer bc-black white">
 			<h3 class="textContainer-messageWindow gold bc-c111 ta-l">メッセージウインドウ</h3>
-			<br>
-			<p class="totalValueInDice"><img src="./img/dice/Polyhedron_Dice.png" alt="多面体ダイスの画像です" width="250px"
+			<p class="totalValueInDice"><img src="./img/dice/Polyhedron_Dice.png" alt="多面体ダイスの画像です" width="230px"
 					height="auto"></p>
 
 		</div>
@@ -149,18 +150,25 @@
 		</div>
 
 		<!-- ダイスが振られるたびに、ダイスの「種類」「個数」「合計」を表示ログを追加する。 -->
-		<div class="log_message bc-black white">
-			<span class="x-large gold">ダイスロール記録</span>
+		<div class="log_message white bc-black">
+			<p class="log_message_title gold large bc-c111">ダイスロール記録</p>
 			<input type="reset" name="reset_btn" value="記録削除ボタン" onclick="logDelete()" class="reset_btn">
-			<br>
-			<div class="large" id="js_log_message"></div>
+
+			<div id="js_all_log_message"><!-- ログ全体 -->
+				<div class="large" id="js_now_log_message"></div>
+				<p class="log_message_title gold medium ta-l bc-c111">過去ログ</p>
+				<div class="large" id="js_before_log_message"></div>
+			</div>
+
 		</div>
 	</div>
 
 	<footer class="white bc-gray">Copyright ©2021 OTA</footer>
 
-	<!-- ⇩JavaScript⇩ -->
 
+	<!------------
+		⇩JavaScript⇩
+	 ------------>
 
 	<!-- サイコロの出目を処理する.js -->
 	<script type="text/javascript" src="js/forDice.js"></script><!-- サイコロの種類を定義する.js -->

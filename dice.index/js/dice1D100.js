@@ -11,9 +11,12 @@ const dice1D100 = () => {
   const success1d100 = success.value;
   const Judgment_result = () => {
     if (d100 <= success1d100) {
-      return "成功";
-    } else {
-      return "失敗";
+        se_Judgment_success();/* 判定成功。効果音（SE） */
+        return "成功";
+
+      } else {
+        se_Judgment_failure();/* 判定失敗。効果音（SE） */
+        return "失敗";
     }
   }
   const d100_img = '<img src="./img/dice/D100.png">'
@@ -42,12 +45,9 @@ const dice1D100 = () => {
   innerHTML_log_total_num(Results);
 
   /* ------------------------------------------------
-    ログのメッセージの先頭に、処理結果を出力する。
+    ログのメッセージを更新し、処理結果を出力する。
+    関数[diceRollLog_controller]はforDice.jsに記載。
+    （引数）は最新のログに使用
   ------------------------------------------------ */
-  const js_log_message = document.getElementById('js_log_message');
-  console.log(js_log_message);
-   js_log_message.insertAdjacentText('afterbegin',
-    "１Ｄ１００の出目は　" + d100 + " でした。" +
-    "判定は " + Judgment_result() + "しました。");
-
+  diceRollLog_controller(d100);
 }
