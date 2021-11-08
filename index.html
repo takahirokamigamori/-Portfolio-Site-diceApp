@@ -1,228 +1,186 @@
 <!doctype html>
 <html lang="ja">
 
-<!-- ヘッダー -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="サイコロ,ダイス,Dice,ゲーム,ブラウザゲーム,TRPG,TRPG用ダイス">
+	<meta name="description" content="色んなサイコロ（Dice）を、コロコロ振れるアプリです。ダイス目を合計機能・ログ機能搭載。ＴＲＰＧに、お勧めです。">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>サイコロ・１００個まで振れるアプリ！！</title>
+	<link rel="icon" type="image" href="img/logo.jpg">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#  article: http://ogp.me/ns/article#">
+	<!-- OGP(Open Graph Protocol) -->
+	<meta property="og:image" content="Ｍｙ Portfolio Siteスムーススクロール＋サイドレイアウト\dice.index\img\dice\ogimage1200x630.png" />
+	<meta property="og:site_name" content="サイコロ・１００個まで振れるアプリ！！" />
+	<meta property="og:type" content="website" />
+	<!--  website: WebサイトのTOPページ  blog: ブログのトップページ  article: 記事ページど、WebサイトのTOP以外のページ  product: 製品の紹介ページ -->
+	<meta property="og:title" content="サイコロ・１００個まで振れるアプリ！！" />
+	<meta property="og:url" content="Ｍｙ Portfolio Siteスムーススクロール＋サイドレイアウト\dice.index" />
+	<meta property="og:description" content="色んなサイコロ（Dice）を、コロコロ振れるアプリです。ダイス目を合計機能・ログ機能搭載。ＴＲＰＧに、お勧めです。" />
+	<!-- TwitterのOGP -->
+	<meta name="twitter:image:src"
+		content="Ｍｙ Portfolio Siteスムーススクロール＋サイドレイアウト\dice.index\img\dice\ogimage1200x630.png" />
+	<meta name="twitter:site" content="@display_grid" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="サイコロ・１００個まで振れるアプリ！！" />
+	<meta name="twitter:description" content="色んなサイコロ（Dice）を、コロコロ振れるアプリです。ダイス目を合計機能・ログ機能搭載。ＴＲＰＧに、お勧めです。" />
 
-  <meta charset="UTF-8">
-  <meta name="keywords" content="ポートフォリオサイト,Portfolio">
-  <meta name="description" content="ポートフォリオサイトです。">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ｍｙ Portfolio Site</title>
-  <link rel="icon" type="image" href="./img/My Portfolio Site.png">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_btn.css"><!-- mainコンテンツ全般（ボタンやウィンドウ）のｃｓｓ -->
+	<link rel="stylesheet" href="css/common.css">
+	<!-- color/background-color/font-siz/text-alignを設定できる【class】を記載した、ｃｓｓ -->
+	<link rel="stylesheet" href="css/top_btn.css"><!-- TOPへ戻るボタン -->
 
+	<!-- fonts.googleから文字データのリンク -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet"><!-- 日本語・明朝体 -->
+	<link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet"><!-- 飾り文字・日本語無し -->
 
-  <link rel="stylesheet" href="css/style.css">
-  <!-- コンテンツの【class】でcolor/background-color/font-sizを指定するｃｓｓ -->
-  <link rel="stylesheet" href="css/collor_class.css">
-  <link rel="stylesheet" href="css/top_btn.css"><!-- TOPボタン -->
-
-  <!-- （引数）のコンテンツの座標に、スムーススクロールする.js -->
-  <script type="text/javascript" src="js/scrollTo.js"></script>
-
-  <!-- OGP(Open Graph Protocol) -->
-  <meta property="og:image" content="\img\thumbnail.png" />
-  <meta property="og:site_name" content="Ｍｙ Portfolio Site" />
-  <meta property="og:type" content="website" />
-  <!--  website: WebサイトのTOPページ  blog: ブログのトップページ  article: 記事ページど、WebサイトのTOP以外のページ  product: 製品の紹介ページ -->
-  <meta property="og:title" content="Ｍｙ Portfolio Site" />
-  <meta property="og:url" content="" />
-  <meta property="og:description" content="ポートフォリオサイトです。" />
-  <!-- TwitterのOGP -->
-  <meta name="twitter:image:src" content="\img\thumbnail.png" />
-  <meta name="twitter:site" content="Ｍｙ Portfolio Site" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ｍｙ Portfolio Site" />
-  <meta name="twitter:description" content="ポートフォリオサイトです。" />
-
-  <!-- fonts.googleから文字データのリンク -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet"><!-- 日本語・明朝体 -->
-  <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet"><!-- 飾り文字・日本語無し -->
 </head>
 
-<!-- ボディ -->
+<!-- body -->
 
 <body>
-  <header>
-    <table>
-      <tr>
-        <td><a href="https://www.google.co.jp/" target="_blank" rel="noopener noreferrer"><img
-              src="./img/link_aicn/Twitter.png" alt="サイト制作者のTwitterへのリンクです。"></a></td>
-        <td><a href="https://www.google.co.jp/" target="_blank" rel="noopener noreferrer"><img
-              src="./img/link_aicn/facebook.png" alt="サイト制作者のＥメールのリンクです。"></a></td>
-        <td><a href="https://www.google.co.jp/" target="_blank" rel="noopener noreferrer"><img
-              src="./img/link_aicn/mail_aicn.png" alt="サイト制作者のＥメールのリンクです。"></a></td>
-      </tr>
-    </table>
-  </header>
+	<header class="header">
+		<h1 class="header-title darkgreen">
+			サイコロ・１００個まで振れるアプリ！！
+		</h1>
 
-  <!-- grid用の空スペースです -->
-  <div class="gray bc-caaa ta-r xx-small r-none">※全て「https://www.google.co.jp/」のリンクにしています➔</div>
+		<!-- undergroundWorld	(ボタンで背景色を変更する) -->
+		<table class="undergroundWorld">
+			<tr>
+				<td class="white">背景色指定</td>
+				<td rowspan="2">
+					<button onclick="undergroundWorldColor()" class="undergroundWorldColor_btn">
+						背景変更
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="color" value="#Cfffaf" id="undergroundWorldColor">
+				</td>
+			</tr>
+		</table>
+	</header>
 
-  <!-- メインヴィジュアル -->
-  <div class="mainVisual gold bc-black">
-    <h1>My Portfolio Site</h1>
-    <h3>～私の学習スキル～</h3>
-  </div>
+	<!-- ボタンボックス -->
+	<div class="top_btn_box">
+		<!-- ダイスボタン -->
+		<button onclick="dice2D6()" class="dice2D6_btn bc-aqua">
+			<b>６面体サイコロ・２個<br>（２Ｄ６）</b>
+		</button>
 
-  <!-- ナヴィゲーション　スムーススクロール  ※レスポンシブデザインで、レイアウトが動く-->
-  <nav class="nav_top bc-caaa">
-    <p class="nav_menu">Menu</p>
-    <button onclick="scrollTo_btn('main1')" class="nav_menu white bc-c777">About</button>
-    <button onclick="scrollTo_btn('main2')" class="nav_menu white bc-c777">Works</button>
-    <button onclick="scrollTo_btn('main3')" class="nav_menu white bc-c777">Scheme</button>
-    <button onclick="scrollTo_btn('main4')" class="nav_menu white bc-c777">Message</button>
-  </nav>
+		<button onclick="dice1D100()" class="dice1d100_btn bc-seagreen">
+			<b>１００面体サイコロ・１個<br>指定数</b>
+			<input type="number" name="dice1D100" id="success1d100" min="1" max="100" value="70">
+			<b>以下の出目なら成功</b>
+		</button>
 
-  <!-- メイン -->
-  <main>
-    <!-- About -->
-    <div class="main1 x-large">
-      <p class="xx-large"><b>🌙 私から皆様へ ～About～ 🌙</b></p>
+		<button onclick="dice_xDn(1,4)" class="dice1d4_btn bc-red">
+			<b>４面体サイコロ・１個<br>（１Ｄ４）</b>
+		</button>
 
-      <div class="main1_contents">
-        <div class="main1_contents_flex1 green goldBorder">
-          <img src="./img/Headset.png" class="bowing" width="120px" height="auto">
-          <p><b>● 伝えたい ●</b></p>
-          <ol class="medium ta-l">
-            <li>フロントエンドエンジニア志望です。</li>
-            <li>”人の役に立つもの” ”楽しんで頂けるもの”を作りたい。</li>
-            <li>貴社の ”自社開発” ”製品追加機能実装”の職務に魅力を感じています。</li>
-          </ol>
-        </div>
-        <div class="main1_contents_flex1 green goldBorder">
-          <img src="./img/Headset.png" class="bowing" width="120px" eight="auto">
-          <p><b>● 自己紹介 ●</b></p>
-          <p class="medium ta-l">
-            <span class="x-large red"> ”褒める” </span>のが好きな人です。<br>
-            人の良いところを知って、敬意を持ちあえる関係になりたいです。<br>
-            他者を尊重して、会話で相互理解を目指します。<br>
-            【チーム開発】を一緒にしたいと、信頼関係を作るため務めます。<br>
-            <br>
+		<button onclick="dice_xDn(10,10)" class="dice10d10_btn bc-red">
+			<b>１０面体サイコロ・１０個<br>（１０Ｄ１０）</b>
+		</button>
 
-          </p>
-        </div>
-      </div>
-    </div>
+		<button onclick="dice_xDn(1,20)" class="dice1d20_btn bc-red">
+			<b>２０面体サイコロ・１個<br>（１Ｄ２０）</b>
+		</button>
 
-    <!-- Works -->
-    <div class="main2 x-large">
-      <p class="xx-large"><b>💻 制作物と学習　～Works & Training～ 💻</b></p>
-      <div class="main2_contents">
-        <div class="main2_contents_flex1 goldBorder">
-          <a href="./dice.index/index.html" target="_blank" rel="noopener noreferrer"><img src="./img/appImg.png"
-              width="200px" height="auto"></a>
-          <br>
-          <a href="./dice.index/index.html" target="_blank" rel="noopener noreferrer">● サイコロアプリ ●</a>
-          <br>
-          <p>
-            様々な「<a href="./dice.index/index.html" target="_blank"
-              rel="noopener noreferrer">サイコロ（Dice）</a>」を振る事が出来ます。<br>
-            <br>
-            【javascript】の習熟を目的に作成しました。<br>
-          </p>
-          <img src="dice.index/img/dice/D100.png" alt="１００面体ダイス" width="100px" height="auto">
-          <img src="dice.index/img/dice/Polyhedron_Dice.png" alt="TRPG用ダイスセット" width="100px" height="auto">
-        </div>
-        <div class="main2_contents_flex1 goldBorder">
-          <img src="./img/training.png" width="120px" height="auto">
-          <p>● 学習方法 ●</p>
-          <p class="ta-l">
-            ・プログラミング学習サイト <br>
-            <img src="img/dotinstall.png" width="150px" height="auto"> <img src="img/Progate.png" width="150px"
-              height="auto"><br>
-            ・独学、Google・YouTube・SNSなどで情報収集<br>
-            ・ＳＥＯ対策、レスポンシブデザイン、基本情報技術者<br>
-            ・言語「ＨＴＭＬ/ＣＳＳ」「javascript（Ｒｅａｃｔ）」「Ｊａｖａ」<br>
-          </p>
-        </div>
-      </div>
+		<!-- choiceDice -->
+		<div class="choiceDice">
+			<p>サイコロの<span>種類(Ｘ面体)</span>と<span>個数</span>を選んで下さい。</p>
 
-    </div>
+			<form>
+				<table class="choiceDice_table">
+					<tr>
+						<th>
+							<p><span>種類</span></p>
+						</th>
+						<td>
+							<select name="js-choiceDiceFrom" class="large ta-c" id="diceTypes" list="diceTypes">
+								<option value=4>４面</option>
+								<option value=6 selected>６面</option>
+								<option value=8>８面</option>
+								<option value=10>１０面</option>
+								<option value=12>１２面</option>
+								<option value=20>２０面</option>
+								<option value=100>１００面</option>
+							</select>
+						</td>
+						<td>
+							<p>のサイコロを</p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<p><span>個数</span></p>
+						</th>
+						<td>
+							<input type="number" name="js-choiceDiceFrom" class="x-large ta-c" id="roll" min="1" max="100" value="2">
+						</td>
+						<td>
+							<p>振ります。</p>
+						</td>
+					</tr>
+				</table>
 
-    <!-- 工夫した事 Scheme -->
-    <div class="main3">
-      <p class="xx-large"><b>💡 工夫した事 ～Scheme～ 💡</b></p>
-      <div class="goldBorder">
-        <div class="ta-l">
-          <p>【①】レスポンシブデザインを意識したランディングページ（LP）にしました。</p>
-          <ul>
-            <li>【理由】</li>
-            <li>１ページ（短時間）でメッセージを伝えられる。</li>
-            <li>スマートフォンの普及により、パソコン離れが進んでいると伺いました。</li>
-            <li>特に若者は便利なＳＮＳやアプリに慣れている。</li>
-          </ul>
-        </div>
-        <div class="ta-l">
-          <p>【②】良く使われる機能を使用してみました。</p>
-          <ul>
-            <li>スムーススクロール</li>
-            <li>サイドメニュー</li>
-            <li>OGP(Open Graph Protocol)</li>
-          </ul>
-        </div>
-        <div class="ta-l">
-          <p>【③】外部ツールを使わない</p>
-          <ul>
-            <li>近年はＳＥＯ対策に　”レスポンスが早い” が重視されるようになりました。</li>
-            <li>【jQuery】【Bootstrap】に依存しない、レスポンスの速さ。</li>
-            <li>個人スキルのみを見て頂くために。</li>
-            <li>【Google.Fonts】のみ使用しました。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+				<button type="button" id="js-ChoiceDice_btn" class="ChoiceDice-btn seagreen" onclick="choiceDiceRoll()">
+					<span>サイコロを振る</span>
+				</button>
 
-    <!-- 伝えたい事 Message -->
-    <div class="main4">
-      <p class="xx-large"><b>📧 伝えたい事 ～Message～ 📧</b></p>
-      <div class="main4_contents goldBorder">
-        <div class="ta-l">
-          <ul>
-            <Li>【御社の魅力】<br>
-              物作りが好きな私には、<br>
-              自社開発商品を広く展開している御社が、とても魅力的に感じました。<br>
-            </Li>
-            <Li>【コミニケーション】<br>
-              信頼関係を作るため、積極的に会話/挨拶していきます。<br>
-              仕事にも、友好関係にも<br>
-              <Span class="x-large green">誠実</Span>にがモットーです。<br>
-            </Li>
-            <Li>【プログラミング】<br>
-              コツコツ積み上げて行く、ポジティブに乗り越えて行きます。<br>
-              プログラミングの学習を初めて、試行錯誤の連続が楽しいと感じます。
-            </Li>
-          </div>
-        </div>
+			</form>
+		</div>
 
-        <div class="main4_contents goldBorder">
-          <div class="ta-l">
-            <ul>
-              <Li>「ＩＴスキル習得研修 」を受講しました。</Li>
-              <Li>御社を初め、協賛企業様、ＲＡＣＪ様、<br>
-                貴重な機会を下さり、ありがとうございました。</Li><br>
-              <p>
-                企画：鳥取県地域活性化雇用創造プロジェクト推進協議会<br>
-                講義内容：基礎情報技術者/ＨＴＭＬ＆ＣＳＳ/Javascript<br>
-                総合開発演習（チームによるECサイト制作）pleiades/JAVA/MySQL<br>
-                <a href="https://rajc.jp/lp/" target="_blank" rel="noopener noreferrer"> 研修説明会のＵＲＬになります</a><br>
-              </p>
-  
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <!-- topに戻るボタン -->
-    <a class="top_btn" href="#">
-      <span>ＴＯＰへ</span>
-    </a>
-  </main>
-  <!-- footer ※レスポンシブデザインで、レイアウトが動く -->
-  <footer class="white bc-caaa">Copyright ©2021 OTA</footer>
+		<!-- メッセージウインドウ -->
+		<div class="textContainer bc-black white">
+			<h3 class="textContainer-messageWindow gold bc-c111 ta-l">メッセージウインドウ</h3>
+			<p class="totalValueInDice"><img src="./img/dice/Polyhedron_Dice.png" alt="多面体ダイスの画像です" width="230px"
+					height="auto"></p>
+
+		</div>
+
+		<!-- ダイスが振られるたびに、ダイスの合計を加算して、新しく表示する -->
+		<div class="log_total bc-black white" id="log_total">
+			<p class="" id="js_log_total">合計は <span class="gold xx-large" id="js_log_total_span">0</span> です。</p>
+		</div>
+
+		<!-- ダイスが振られるたびに、ダイスの「種類」「個数」「合計」を表示ログを追加する。 -->
+		<div class="log_message white bc-black">
+			<p class="log_message_title gold large bc-c111">ダイスロール記録</p>
+			<input type="reset" name="reset_btn" value="記録削除ボタン" onclick="logDelete()" class="reset_btn">
+
+			<div id="js_all_log_message"><!-- ログ全体 -->
+				<div class="large" id="js_now_log_message"></div>
+				<p class="log_message_title gold medium ta-l bc-c111">過去ログ</p>
+				<div class="large" id="js_before_log_message"></div>
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="white bc-gray">Copyright ©2021 OTA</footer>
+
+
+	<!------------
+		⇩JavaScript⇩
+	 ------------>
+
+	<!-- サイコロの出目を処理する.js -->
+	<script type="text/javascript" src="js/forDice.js"></script><!-- サイコロの種類を定義する.js -->
+	<script type="text/javascript" src="js/dice2D6.js"></script>
+	<script type="text/javascript" src="js/dice1D100.js"></script>
+	<script type="text/javascript" src="js/normal_attack.js"></script>
+	<script type="text/javascript" src="js/choiceDiceRoll.js"></script>
+	<script type="text/javascript" src="js/dice_xDn.js"></script>
+
+
+	<!-- 背景を変更する.js -->
+	<script type="text/javascript" src="js/undergroundWorldColor.js"></script>
 
 </body>
 
